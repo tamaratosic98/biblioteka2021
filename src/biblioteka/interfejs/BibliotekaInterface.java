@@ -4,8 +4,22 @@ import java.util.LinkedList;
 
 import biblioteka.Autor;
 import biblioteka.Knjiga;
-
+/**
+ * Interfejs koji predstavlja biblioteku. 
+ * 
+ * @author Tamara Tosic
+ *
+ */
 public interface BibliotekaInterface {
+	/**
+	 * Dodaje novu knjigu u biblioteku.
+	 * 
+	 * @param knjiga Knjiga koja se dodaje.
+	 * 
+	 * @throws java.lang.NullPointerException Ako je uneta knjiga null.
+	 * @throws java.lang.RuntimeException Ako uneta knjiga vec postoji u biblioteci (duplikat).
+	 * 
+	 */
 	public void dodajKnjigu(Knjiga knjiga);
 	public void obrisiKnjigu(Knjiga knjiga);
 	public LinkedList<Knjiga> vratiSveKnjige();
